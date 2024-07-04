@@ -9,6 +9,7 @@
 }
 
 body {
+    overflow-x: hidden;
     font-family: Poppins;
     color: #000;
 }
@@ -22,12 +23,95 @@ a:hover {
     text-decoration: none;
 }
 
+/*Header*/
+header {
+    top: -100px;
+    transition: all .3s linear;
+}
+
+.navbar-nav.menu_bar {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.theme-btn {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    font-size: 17px;
+    padding: 8px 26px;
+    background: #fff;
+    line-height: 25px;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: capitalize;
+    transition: all 500ms ease;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.nav-item a i {
+    color: var(--primary);
+}
+
+.navbar-toggler:not(.collapsed)>.navbar-toggler-icon {
+    width: 1rem;
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+}
+
 .navbar-light .navbar-nav .nav-link {
     color: rgba(0, 0, 0, .9);
 }
 
 .navbar-expand-lg .navbar-collapse {
     justify-content: end;
+}
+
+.gap-2 {
+    gap: .5rem;
+}
+
+/*Footer*/
+.footer-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: .4rem 1rem;
+    flex-wrap: wrap;
+}
+
+.footer {
+    /* margin-top: 20px; */
+    padding: 20px 0 10px;
+    background: var(--primary);
+}
+
+.footer-menu li:last-child::after {
+    content: "";
+}
+
+.footer-cities li {
+    margin: 5px 0 5px 0;
+    position: relative;
+    width: 20% !important;
+    float: left;
+    list-style: none;
+}
+
+.footer-cities li a {
+    text-decoration: none;
+}
+
+.social-icons>a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--white);
+    line-height: 38px;
 }
 
 .main_menu {
