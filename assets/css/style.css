@@ -8,6 +8,12 @@
     padding: 0;
 }
 
+@media (min-width: 993px) {
+    .container {
+        max-width: 992px;
+    }
+}
+
 body {
     overflow-x: hidden;
     font-family: Poppins;
